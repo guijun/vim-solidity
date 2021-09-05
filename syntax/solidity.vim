@@ -164,7 +164,7 @@ syn match     solLibName          /[a-zA-Z_][0-9a-zA-Z_]*\s*\zefor/ contained
 
 hi def link   solAbstract         Special
 hi def link   solContract         Define
-hi def link   solContractName     Function
+hi def link   solContractName     Type
 hi def link   solInheritor        Keyword
 hi def link   solLibUsing         Special
 hi def link   solLibName          Type
@@ -278,8 +278,8 @@ syn match     solTypeCast         /\<string\ze\s*(/ nextgroup=solTypeCastParens 
 syn match     solTypeCast         /\<bool\ze\s*(/ nextgroup=solTypeCastParens skipwhite skipempty
 syn region    solTypeCastParens   start=/(/ end=/)/ contained contains=solMethod,solFuncCall,solString,solConstant,solNumber,solTypeCast,solComma transparent
 
-hi def link   solValueType        Type
-hi def link   solTypeCast         Type
+hi def link   solValueType        StorageClass
+hi def link   solTypeCast         StorageClass
 
 " Conditionals
 syn match     solIf               /\<if\>/ contained skipwhite skipempty nextgroup=solIfParens
