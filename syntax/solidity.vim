@@ -115,9 +115,10 @@ syn region    solFuncModParens    contained contains=solString,solFuncCall,solCo
       \ start='('
       \ end=')'
 syn keyword   solFuncReturn       contained nextgroup=solFuncRetParens skipwhite skipempty returns
-syn region    solFuncRetParens    contains=solValueType,solFuncStorageType nextgroup=solFuncBody skipempty skipwhite
-      \ start='(' 
-      \ end=')' 
+" will freeze neovim when working with big file
+" syn region    solFuncRetParens    contains=solValueType,solFuncStorageType nextgroup=solFuncBody skipempty skipwhite
+"      \ start='(' 
+"      \ end=')' 
 syn region    solFuncBody         contained contains=solDestructure,solComment,solAssemblyBlock,solEmitEvent,solTypeCast,solMethod,solValueType,solConstant,solKeyword,solRepeat,solLabel,solException,solStructure,solFuncStorageType,solOperator,solNumber,solString,solFuncCall,solIf,solElse,solLoop skipempty skipwhite
       \ start='{' 
       \ end='}' 
